@@ -1,9 +1,9 @@
 $(".btnVerify").click(function (e) {
-  Scan('verify')
+  Scan('verify');
 });
 
 $(".btnClaim").click(function (e) {
-  Scan('claim')
+  Scan('claim');
 });
 
 var thisPage = location.hash;
@@ -24,17 +24,16 @@ function Scan(codeType) {
 
     }
 
-  })
-    .catch(function (e) {
-      console.error(e);
-    });
+  }).catch(function (e) {
+    console.error(e);
+  });
 
   let scanner = new Instascan.Scanner({ video: document.getElementById('camera') });
   scanner.addListener('scan', function (assetId) {
     if (codeType == "verify") {
-      Verify(assetId)
+      Verify(assetId);
     } else if (codeType == "claim") {
-      Claim(assetId)
+      Claim(assetId);
     }
     scanner.stop();
 
@@ -47,14 +46,14 @@ function Claim(assetId) {
       console.log(data[0]);
       if (!data[0]) alert('Your beer is not on blockchain! Fake!')
       if (!data[0].content.data) alert('No data[0].content.data')
-      var data = data[0].content.data
+      let data = data[0].content.data;
 
-      for (var i in data) {
+      for (let i in data) {
         if (i == "identifiers") continue
         $('#BeerInfo').append('<li class="ui-field-contain">' +
-                      '<label>' + i + '</label>' +
+          '<label>' + i + '</label>' +
           '<span>' + data[i] + '</span>' +
-          '</li>')
+          '</li>');
       }
 
       $.mobile.changePage("#asset", { transition: "slide" });
@@ -74,7 +73,7 @@ function Verify(assetId) {
       for (var i in data) {
         if (i == "identifiers") continue
         $('#BeerInfo').append('<li class="ui-field-contain">' +
-                      '<label>' + i + '</label>' +
+          '<label>' + i + '</label>' +
           '<span>' + data[i] + '</span>' +
           '</li>')
       }
