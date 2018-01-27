@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 <head>
 
   <title>BeerChain</title>
@@ -22,40 +23,51 @@
   <div data-role="page" id="home" id="container">
 
     <div data-role="header" id="header">
-      <h1><img src="./images/icon.png" id="icon"> BeerChain</h1>
-    </div>    
+      <h1>
+        <img src="./images/icon.png" id="icon"> BeerChain</h1>
+    </div>
     <div role="main" class="ui-content" id="body">
       <h2>Beer balance:</h2>
-      <h1><p id="beerBalance">0</p> AMB<br/><img src="./images/beer.png" id="logo" /></h1>
+      <h1>
+        <p id="beerBalance">0</p> AMB
+        <br/>
+        <img src="./images/beer.png" id="logo" />
+      </h1>
       <p>
-        <a href="#scan" class="ui-btn ui-shadow ui-corner-all btnVerify" ><span class="green">&#10004;</span> Verify</a>
+        <a href="#scan" class="ui-btn ui-shadow ui-corner-all btnVerify">
+          <span class="green">&#10004;</span> Verify</a>
       </p>
       <p>
-        <a href="#scan" class="ui-btn ui-shadow ui-corner-all btnClaim" >&#127866; Claim</a>
+        <a href="#scan" class="ui-btn ui-shadow ui-corner-all btnClaim">&#127866; Claim</a>
       </p>
     </div>
 
- 
+    <div data-role="footer" data-theme="a" class="footer" id="footer">
+      <h4> BeerChain Powered by
+        <img src="https://d33wubrfki0l68.cloudfront.net/9e1fb050865401a69f27b46683de38626a9372d0/9efc0/assets/logo-color-2.png" /> &copy; 2018</h4>
+    </div>
   </div>
 
   <!-- Start of Verification page: #verify -->
   <div data-role="page" id="scan" data-theme="a">
 
     <div data-role="header" id="header">
-      <h1><img src="./images/icon.png" id="icon"> Scan BeerCode</h1>
-    </div>    
-    
+      <h1>
+        <img src="./images/icon.png" id="icon"> Scan BeerCode</h1>
+    </div>
+
     <div role="main" class="ui-content">
 
-	    <div class="cameraContainer">
+      <div class="cameraContainer">
         <video id="camera"></video>
       </div>
 
       <a href="#home" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b" id="back">Back</a>
     </div>
 
-   <div data-role="footer" data-theme="a" class="footer" id="footer">
-      <h4> BeerChain Powered by <img src="https://d33wubrfki0l68.cloudfront.net/9e1fb050865401a69f27b46683de38626a9372d0/9efc0/assets/logo-color-2.png" /> &copy; 2018</h4>
+    <div data-role="footer" data-theme="a" class="footer" id="footer">
+      <h4> BeerChain Powered by
+        <img src="https://d33wubrfki0l68.cloudfront.net/9e1fb050865401a69f27b46683de38626a9372d0/9efc0/assets/logo-color-2.png" /> &copy; 2018</h4>
     </div>
   </div>
   <!-- End verification page -->
@@ -64,16 +76,17 @@
   <div data-role="page" id="asset" data-theme="a">
 
     <div data-role="header" id="header">
-      <h1><img src="./images/icon.png" id="icon"> Beer Information</h1>
-    </div>    
-    
+      <h1>
+        <img src="./images/icon.png" id="icon"> Beer Information</h1>
+    </div>
+
     <div role="main" class="ui-content">
-      <img src="./images/ok.png" id="ok"/>
+      <img src="./images/ok.png" id="ok" />
       <h2>&#127866; You beer is original.</h2>
       <form>
-            
+
         <ul id="BeerInfo" data-role="listview" data-inset="true">
-         
+
           </li>
         </ul>
       </form>
@@ -81,7 +94,8 @@
     </div>
 
     <div data-role="footer" data-theme="a" class="footer" id="footer">
-      <h4> BeerChain Powered by <img src="https://d33wubrfki0l68.cloudfront.net/9e1fb050865401a69f27b46683de38626a9372d0/9efc0/assets/logo-color-2.png" /> &copy; 2018</h4>
+      <h4> BeerChain Powered by
+        <img src="https://d33wubrfki0l68.cloudfront.net/9e1fb050865401a69f27b46683de38626a9372d0/9efc0/assets/logo-color-2.png" /> &copy; 2018</h4>
     </div>
 
   </div>
