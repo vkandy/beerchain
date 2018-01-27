@@ -67,7 +67,7 @@ function Verify(assetId) {
   $.getJSON("https://network.ambrosus.com/assets/find/BeerCode:" + assetId)
     .done(function (data) {
       console.log(data[0]);
-      if (!data[0]) alert('No data[0]')
+      if (!data[0]) alert('Your beer is not on blockchain! Fake!')
       if (!data[0].content.data) alert('No data[0].content.data')
       var data = data[0].content.data
       for (var i in data) {
