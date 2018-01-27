@@ -28,10 +28,10 @@
       <h2>Beer balance:</h2>
       <h1><p id="beerBalance">0</p> AMB<br/><img src="./images/beer.png" id="logo" /></h1>
       <p>
-        <a href="#verify" class="ui-btn ui-shadow ui-corner-all" id="btnVerify"><span class="green">&#10004;</span> Verify</a>
+        <a href="#scan" class="ui-btn ui-shadow ui-corner-all btnVerify" ><span class="green">&#10004;</span> Verify</a>
       </p>
       <p>
-        <a href="#claim" class="ui-btn ui-shadow ui-corner-all" id="btnClaim" data-rel="dialog" data-transition="pop">&#127866; Claim</a>
+        <a href="#scan" class="ui-btn ui-shadow ui-corner-all btnClaim" >&#127866; Claim</a>
       </p>
     </div>
 
@@ -39,7 +39,7 @@
   </div>
 
   <!-- Start of Verification page: #verify -->
-  <div data-role="page" id="verify" data-theme="a">
+  <div data-role="page" id="scan" data-theme="a">
 
     <div data-role="header">
       <h1>Scan BeerCode</h1>
@@ -48,7 +48,7 @@
     <div role="main" class="ui-content">
 
 	    <div class="cameraContainer">
-        <video id="cameraVerify"></video>
+        <video id="camera"></video>
       </div>
 
       <a href="#home" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
@@ -86,25 +86,6 @@
   </div>
   <!-- End Asset page -->
 
-  <!-- Start of Claim page: #claim -->
-  <div data-role="page" id="claim">
-
-    <div data-role="header" data-theme="b">
-        <h1>Dialog</h1>
-    </div>
-
-    <div role="main" class="ui-content">
-      <h2>Popup</h2>
-      <p>You have claimed this beer.</p>
-	   <div class="camera-container">
-        <video id="cameraClaim"></video>
-      </div>
-      <p>
-        <a href="#home" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to Home screen</a>
-      </p>
-    </div>
-
-  </div>
   <script src="scripts/init.js"></script>
 
 </body>
