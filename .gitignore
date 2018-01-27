@@ -1,0 +1,13 @@
+!.gitkeep
+.DS_Store
+.idea
+.notes
+libs
+build
+bower_components
+contracts.txt
+dist
+logs
+node_modules
+secrets.json
+vestingSchedules.json
