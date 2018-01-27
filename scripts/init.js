@@ -50,7 +50,7 @@ function Claim(assetId) {
 
       for (let i in data) {
         if (i == "identifiers") continue
-        $('#BeerInfo').append('<li class="ui-field-contain">' +
+        $('#BeerInfo').append('<li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">' +
           '<label>' + i + '</label>' +
           '<span>' + data[i] + '</span>' +
           '</li>');
@@ -72,7 +72,7 @@ function Verify(assetId) {
       var data = data[0].content.data
       for (var i in data) {
         if (i == "identifiers") continue
-        $('#BeerInfo').append('<li class="ui-field-contain">' +
+        $('#BeerInfo').append('<li class="ui-field-contain ui-li-static ui-body-inherit ui-first-child">' +
           '<label>' + i + '</label>' +
           '<span>' + data[i] + '</span>' +
           '</li>')
