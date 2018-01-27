@@ -1,69 +1,79 @@
 <!doctype html>
 <html>
 <head>
-    <title>BeerChain</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    <script src="scripts/beerchain.js"></script>
+  <title>BeerChain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src="scripts/beerchain.js"></script>
+  <link rel="stylesheet" href="./styles.css" type="text/css" media="all">
 </head>
+
 <body>
 
-<!-- Start of first page: #one -->
-<div data-role="page" id="one">
+
+  <!-- Start of first page: #home -->
+  <div data-role="page" id="home" id="container">
+
+    <div data-role="header" id="header">
+      <h1>BeerChain</h1>
+    </div>
+
+    <div role="main" class="ui-content" id="body">
+      <h2>Beer balance:
+        <h2>
+          <h1>
+            <p id="beerBalance">0</p> AMB</h1>
+          <p>
+            <a href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a>
+          </p>
+          <p>
+            <a href="#claim" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Claim your beer</a>
+          </p>
+    </div>
+
+    <div data-role="footer" data-theme="a" class="footer" id="footer">
+      <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
+    </div>
+  </div>
+
+  <!-- Start of Verification page: #verify -->
+  <div data-role="page" id="verify" data-theme="a">
 
     <div data-role="header">
-        <h1>BeerChain</h1>
+      <h1>Scan BeerCode</h1>
     </div>
 
     <div role="main" class="ui-content">
-        <h2>Home</h2>
-        <p><a href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a></p>
-        <p><a href="#claim" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Claim your beer</a></p>
-    </div>
-
-    <div data-role="footer" data-theme="a">
-        <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
-    </div>
-</div>
-
-<!-- Start of Verification page: #verify -->
-<div data-role="page" id="verify" data-theme="a">
-
-    <div data-role="header">
-        <h1>Scan BeerCode</h1>
-    </div>
-
-    <div role="main" class="ui-content">
-        <h2>Scan</h2>
-        <p>Scan BeerCode</p>
-        <a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
+      <h2>Scan</h2>
+      <p>Scan BeerCode</p>
+      <a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
     </div>
 
     <div data-role="footer">
-        <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
+      <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
     </div>
-</div>
-<!-- End verification page -->
+  </div>
+  <!-- End verification page -->
 
-<!-- Start of Claim page: #claim -->
-<div data-role="page" id="claim">
+  <!-- Start of Claim page: #claim -->
+  <div data-role="page" id="claim">
 
     <div data-role="header" data-theme="b">
-        <h1>Dialog</h1>
+      <h1>Dialog</h1>
     </div>
 
     <div role="main" class="ui-content">
-        <h2>Popup</h2>
-        <p>You have claimed this beer.</p>
-        <p><a href="#home" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to Home screen</a></p>
+      <h2>Popup</h2>
+      <p>You have claimed this beer.</p>
+      <p>
+        <a href="#home" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to Home screen</a>
+      </p>
     </div>
 
-    <div data-role="footer">
-        <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
-    </div>
-</div>
+  </div>
 
 </body>
+
 </html>
