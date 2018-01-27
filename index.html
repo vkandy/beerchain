@@ -1,20 +1,23 @@
 <!doctype html>
 <html>
-
 <head>
-    <title>BeerChain</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
-    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
-    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-    
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+
+  <title>BeerChain</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   
-    <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-	
-	
-    <script src="scripts/init.js"></script>
-    </head>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+  <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
+  
+  <script src="scripts/beerchain.js"></script>
+  
+   
+  <link rel="stylesheet" href="./styles.css" type="text/css" media="all">
+</head>
+
 <body>
 
 
@@ -32,9 +35,7 @@
             <p id="beerBalance">0</p> AMB</h1>
           <p>
 		  
-		  <video id="preview"></video>
-		  
-            <a href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a>
+            <a id="btnVerify" href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a>
           </p>
           <p>
             <a href="#claim" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Claim your beer</a>
@@ -57,6 +58,10 @@
 
       <h2>Scan</h2>
       <p>Scan BeerCode</p>
+	  <div class="preview-container">
+        <video id="preview"></video>
+      </div>
+	  
       <a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
     </div>
 
@@ -84,6 +89,8 @@
     </div>
 
   </div>
+  
+<script src="scripts/init.js"></script>
 
 </body>
 
