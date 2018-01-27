@@ -3,7 +3,7 @@ $("#btnVerify").click(function(e) {
 	scanner.addListener('scan', function(assetId) {
 		$.getJSON("https://network.ambrosus.com/assets/find/BeerCode:" + assetId)
 		.done(function(data) {
-			console.log(data[0].content);
+			console.log(data[0]);
 			$.mobile.pagecontainer("change", "#asset", {transition: "slide"});
 		});
 	});
