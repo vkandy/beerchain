@@ -8,21 +8,61 @@
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
 </head>
 <body>
-<div data-role="page">
+
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
 
     <div data-role="header">
         <h1>BeerChain</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Home</h2>
+        <p><a href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a></p>
+        <p><a href="#claim" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Claim your beer</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer" data-theme="a">
+        <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
+    </div>
+</div>
+
+<!-- Start of Verification page: #verify -->
+<div data-role="page" id="verify" data-theme="a">
+
+    <div data-role="header">
+        <h1>Scan BeerCode</h1>
     </div>
 
     <div role="main" class="ui-content">
-        <a href="verify.html" data-role="button" data-icon="check" data-iconpos="right">Verify</a>
-        <a href="claim.html" data-role="button" data-icon="star" data-iconpos="right">Claim</a>
+        <h2>Scan</h2>
+        <p>Scan BeerCode</p>
+        <a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
     </div>
 
     <div data-role="footer">
-        <h4>&copy; 2018</h4>
+        <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
     </div>
+</div>
+<!-- End verification page -->
 
-</div><!-- /page -->
+<!-- Start of Claim page: #claim -->
+<div data-role="page" id="claim">
+
+    <div data-role="header" data-theme="b">
+        <h1>Dialog</h1>
+    </div><!-- /header -->
+
+    <div role="main" class="ui-content">
+        <h2>Popup</h2>
+        <p>You have claimed this beer.</p>
+        <p><a href="#home" data-rel="back" class="ui-btn ui-shadow ui-corner-all ui-btn-inline ui-icon-back ui-btn-icon-left">Back to Home screen</a></p>
+    </div><!-- /content -->
+
+    <div data-role="footer">
+        <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
+    </div>
+</div>
+
 </body>
 </html>
