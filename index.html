@@ -7,14 +7,11 @@
   <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-  
+
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/webrtc-adapter/3.3.3/adapter.min.js"></script>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.10/vue.min.js"></script>
   <script type="text/javascript" src="https://rawgit.com/schmich/instascan-builds/master/instascan.min.js"></script>
-  
-  <script src="scripts/beerchain.js"></script>
-  
-   
+
   <link rel="stylesheet" href="./styles.css" type="text/css" media="all">
 </head>
 
@@ -28,23 +25,21 @@
       <h1>BeerChain</h1>
     </div>
 
-    <div role="main" class="ui-content" id="body">
+      <div role="main" class="ui-content" id="body">
+        <h2>Beer balance:</h2>
+        <h1>
+          <p id="beerBalance">0</p> AMB
+        </h1>
 
-      <h2>Beer balance:
-        <h2>
-          <h1>
-            <p id="beerBalance">0</p> AMB</h1>
-          <p>
-		  
-            <a id="btnVerify" href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a>
-          </p>
-          <p>
-            <a href="#claim" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Claim your beer</a>
-          </p>
+        <p>
+          <a id="btnVerify" href="#verify" class="ui-btn ui-shadow ui-corner-all">Scan BeerCode</a>
+        </p>
+        <p>
+          <a href="#claim" class="ui-btn ui-shadow ui-corner-all" data-rel="dialog" data-transition="pop">Claim your beer</a>
+        </p>
+      </div>
 
-    </div>
-
-    <div data-role="footer" data-theme="a" class="footer" id="footer">
+      <div data-role="footer" data-theme="a" class="footer" id="footer">
       <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
     </div>
   </div>
@@ -63,8 +58,8 @@
 	  <div class="preview-container">
         <video id="preview"></video>
       </div>
-	  
-      <a href="#one" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
+
+      <a href="#home" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
     </div>
 
     <div data-role="footer">
@@ -72,6 +67,33 @@
     </div>
   </div>
   <!-- End verification page -->
+
+  <!-- Start of Asset page: #asset -->
+  <div data-role="page" id="asset" data-theme="a">
+
+    <div data-role="header">
+      <h1>Asset Information</h1>
+    </div>
+
+    <div role="main" class="ui-content">
+      <h2>Scan</h2>
+      <form>
+            
+        <ul data-role="listview" data-inset="true">
+          <li class="ui-field-contain">
+            <label>Brewery:</label>
+            <span>Hello</span>        
+          </li>
+        </ul>
+      </form>
+      <a href="#home" data-direction="reverse" class="ui-btn ui-shadow ui-corner-all ui-btn-b">Back to Home screen</a>
+    </div>
+
+    <div data-role="footer">
+      <h4>BeerChain Powered by Ambrosus &copy; 2018</h4>
+    </div>
+  </div>
+  <!-- End Asset page -->
 
   <!-- Start of Claim page: #claim -->
   <div data-role="page" id="claim">
@@ -91,8 +113,7 @@
     </div>
 
   </div>
-  
-<script src="scripts/init.js"></script>
+  <script src="scripts/init.js"></script>
 
 </body>
 
