@@ -76,3 +76,7 @@ html, body {
   text-align: center;
   display: block;
 }
+
+#back {
+  margin-bottom: 50px;
+}
