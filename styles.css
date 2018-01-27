@@ -64,3 +64,7 @@ html, body {
   display: inline-block;
   margin-top: 1px;
 }
+
+#cameraVerify {
+  width: 100%;
+}
