@@ -68,3 +68,11 @@ html, body {
 #cameraVerify {
   width: 100%;
 }
+
+#ok {
+  margin-left: auto;
+  margin-right: auto;
+  width:400px;
+  text-align: center;
+  display: block;
+}
